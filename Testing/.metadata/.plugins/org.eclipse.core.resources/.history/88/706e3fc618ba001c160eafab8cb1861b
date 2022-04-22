@@ -1,0 +1,45 @@
+package com.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bean.Employee;
+
+public class EmployeeService {
+	public String sayHello(String name){
+		return "welcome to JUnit 5 testing" +name;
+	}
+	public String checkUser(String name, String pass) {
+		if(name.equals("Siddu") && pass.equals("123")){
+			return "success";
+		}else {
+			return "failure";
+		}
+	}
+	public float updateSalary(Employee emp) {
+		if(emp.getDesg().equals("Manager")){
+			return emp.getSalary()+5000;
+		}else if(emp.getDesg().equals("Programmer")) {
+			return emp.getSalary()+3000;
+		}else {
+			return emp.getSalary();
+		}
+				
+	}
+	public Employee getEmployeeInfo() {
+		Employee emp=new Employee();
+		return emp;
+		
+	}
+	public List<Employee> getEmployeeDetails(){
+		Employee emp1=new Employee();
+		Employee emp2=new Employee();
+		Employee emp3=new Employee();
+		List<Employee> listOfemp=new ArrayList<Employee>();
+		listOfemp.add(emp1);
+		listOfemp.add(emp2);
+		listOfemp.add(emp3);
+		return listOfemp;
+	}
+
+}

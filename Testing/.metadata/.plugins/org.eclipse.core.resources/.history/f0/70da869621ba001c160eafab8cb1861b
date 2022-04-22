@@ -1,0 +1,17 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.List;
+
+import com.bean.Employee;
+
+public class EmployeeDao {
+	public List<Employee> getAllEmployeeDetails(){
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con=DriverManager.getConnection(null)
+		}
+	}
+
+}

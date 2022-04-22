@@ -1,0 +1,38 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.bean.Employee;
+import com.dao.EmployeeDao;
+import com.service.EmployeeService;
+
+@ExtendWith(MockitoExtension.class)
+class EmployeeServiceMockTest {
+	@Mock
+	EmployeeDao employeeDao;
+	
+	@InjectMocks
+	EmployeeService employeeService;
+
+	@Test
+	void testGetEmployeeDataFromDb() {
+		Employee emp1=new Employee(1,"Siddu",12000,"Tester");
+		Employee emp2=new Employee(1,"Yoga",12000,"Programmer");
+		List<Employee> listOfFakeEmployee=new ArrayList<>();
+		listOfFakeEmployee.add(emp1);
+		listOfFakeEmployee.add(emp2);
+		Mockito.when(employeeDao.getAllEmployeeDetails()).thenReturn(null);
+		
+	}
+
+}

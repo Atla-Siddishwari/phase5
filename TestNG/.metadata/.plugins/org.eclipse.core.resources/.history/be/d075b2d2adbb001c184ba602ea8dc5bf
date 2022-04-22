@@ -1,0 +1,14 @@
+package test;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.Test;
+
+import com.service.Operation;
+
+public class carTest {
+  @Test
+  public void carLoan() {
+	 System.out.println();
+  }
+}

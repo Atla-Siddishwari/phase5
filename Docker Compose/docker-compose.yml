@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  web:
+    image: siddishwari/my-ng-angular:1.0
+    ports:
+      - "85:80"
+  springweb:
+    image: my-spring-boot
+    ports:
+      - "8181:8080"
+  jspweb:
+    image: my-jsp
+    ports:
+      - "8081:8080"
+

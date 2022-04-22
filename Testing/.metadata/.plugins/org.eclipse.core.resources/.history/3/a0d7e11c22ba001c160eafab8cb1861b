@@ -1,0 +1,26 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.bean.Employee;
+
+public class EmployeeDao {
+	public List<Employee> getAllEmployeeDetails(){
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con=DriverManager.getConnection("jdbc:mysql:localhost:3306/my_database","root","Siddu@04");
+			PreparedStatement pstmt=con.prepareStatement("select * from employee");
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()) {
+				Employee emp=new Employee();
+				
+			}
+					
+		}
+	}
+
+}

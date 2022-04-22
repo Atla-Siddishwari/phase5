@@ -1,0 +1,24 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+
+import com.dao.EmployeeDao;
+import com.service.EmployeeService;
+
+class ProductServiceMockTest {
+	@Mock
+	EmployeeDao employeeDao;
+	
+	@InjectMocks
+	EmployeeService employeeService;
+	
+	@Test
+	void testGetProductInfo() {
+		
+	}
+
+}

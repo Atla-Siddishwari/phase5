@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+<groups>
+<run>
+<inclue name="loan"></inclue>
+</run>
+</groups>
+  <test name="Test">
+    <classes>
+      <class name="test.carTest"/>
+      <class name="test.bikeTest"/>
+      <class name="test.OperationTest"/>
+      <class name="test.PriorityTest"/>
+      <class name="test.TestNgHook"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
